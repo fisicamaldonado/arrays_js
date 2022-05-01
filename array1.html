@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Documento base para programar en javaScript interactuando con html -->
+<head>
+    <title>Juego Arrays</title>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <!-- Con el anterior meta nos aseguramos que las tildes se vean bien -->
+
+</head>
+<body>
+
+    <script type="text/javascript">
+    
+        var posibleSuerte=["recibirás dinero","buenas noticias laborales","vacaciones serán geniales","inversiones exitosas","buena salud","recibirás una sorpresa agradable","fin de semana divertido","muy bien en el amor","paseo familiar pronto"];
+        
+        function adivinarSuerte(){
+
+            var totalDeSuerte=posibleSuerte.length;
+            var elegido = Math.floor(Math.random()*totalDeSuerte);
+            document.getElementById("destinoFinal").innerHTML = posibleSuerte[elegido];
+        }
+    </script>
+
+    <h1 id="titulo">Conoce tu destino</h1></br>
+
+    <img src="imagenes/suerte.png" width="250" height="250" /></br>
+    <form>
+    
+    <input type="button" name="LaSuerte" value="Presiona para conocer tu destino" onclick=adivinarSuerte()></br>
+    <!--Este es un ejemplo de botón para interactuar con el documento llamando una función de JS-->
+        
+    </form>
+    <h1>Tu suerte es...</h1></br>
+    <h1 id="destinoFinal">...</h1></br>
+</body>
+
+</html>
